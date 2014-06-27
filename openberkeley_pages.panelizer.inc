@@ -51,10 +51,10 @@ function openberkeley_pages_panelizer_defaults() {
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
   $panelizer->api_version = 1;
-  $panelizer->name = 'node:openberkeley_page:default';
+  $panelizer->name = 'node:openberkely_content_page:default';
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
-  $panelizer->panelizer_key = 'openberkeley_page';
+  $panelizer->panelizer_key = 'openberkely_content_page';
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = 'page-page';
   $panelizer->css = '';
@@ -116,15 +116,15 @@ function openberkeley_pages_panelizer_defaults() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
-  $export['node:openberkeley_page:default'] = $panelizer;
+  $export['node:openberkely_content_page:default'] = $panelizer;
 
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
   $panelizer->api_version = 1;
-  $panelizer->name = 'node:openberkeley_page:default:default';
+  $panelizer->name = 'node:openberkely_content_page:default:default';
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
-  $panelizer->panelizer_key = 'openberkeley_page';
+  $panelizer->panelizer_key = 'openberkely_content_page';
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = '';
   $panelizer->css = '';
@@ -273,15 +273,15 @@ function openberkeley_pages_panelizer_defaults() {
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
-  $export['node:openberkeley_page:default:default'] = $panelizer;
+  $export['node:openberkely_content_page:default:default'] = $panelizer;
 
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
   $panelizer->api_version = 1;
-  $panelizer->name = 'node:openberkeley_page:default:featured';
+  $panelizer->name = 'node:openberkely_content_page:default:featured';
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
-  $panelizer->panelizer_key = 'openberkeley_page';
+  $panelizer->panelizer_key = 'openberkely_content_page';
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = '';
   $panelizer->css = '';
@@ -428,15 +428,15 @@ function openberkeley_pages_panelizer_defaults() {
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
-  $export['node:openberkeley_page:default:featured'] = $panelizer;
+  $export['node:openberkely_content_page:default:featured'] = $panelizer;
 
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
   $panelizer->api_version = 1;
-  $panelizer->name = 'node:openberkeley_page:default:teaser';
+  $panelizer->name = 'node:openberkely_content_page:default:teaser';
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
-  $panelizer->panelizer_key = 'openberkeley_page';
+  $panelizer->panelizer_key = 'openberkely_content_page';
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = '';
   $panelizer->css = '';
@@ -557,7 +557,7 @@ function openberkeley_pages_panelizer_defaults() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
-  $export['node:openberkeley_page:default:teaser'] = $panelizer;
+  $export['node:openberkely_content_page:default:teaser'] = $panelizer;
 
   return $export;
 }

@@ -32,7 +32,7 @@ function openberkeley_pages_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'openberkeley_page' => array(
+    'openberkely_content_page' => array(
       'name' => t('Content Page'),
       'base' => 'node_content',
       'description' => t('An important page to display to users on your site.'),

@@ -21,9 +21,9 @@ function openberkeley_pages_defaultconfig_features() {
 function openberkeley_pages_defaultconfig_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'create openberkeley_page content'.
-  $permissions['create openberkeley_page content'] = array(
-    'name' => 'create openberkeley_page content',
+  // Exported permission: 'create openberkely_content_page content'.
+  $permissions['create openberkely_content_page content'] = array(
+    'name' => 'create openberkely_content_page content',
     'roles' => array(
       'administrator' => 'administrator',
       'builder' => 'builder',
@@ -33,9 +33,9 @@ function openberkeley_pages_defaultconfig_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete any openberkeley_page content'.
-  $permissions['delete any openberkeley_page content'] = array(
-    'name' => 'delete any openberkeley_page content',
+  // Exported permission: 'delete any openberkely_content_page content'.
+  $permissions['delete any openberkely_content_page content'] = array(
+    'name' => 'delete any openberkely_content_page content',
     'roles' => array(
       'administrator' => 'administrator',
       'builder' => 'builder',
@@ -43,9 +43,9 @@ function openberkeley_pages_defaultconfig_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete own openberkeley_page content'.
-  $permissions['delete own openberkeley_page content'] = array(
-    'name' => 'delete own openberkeley_page content',
+  // Exported permission: 'delete own openberkely_content_page content'.
+  $permissions['delete own openberkely_content_page content'] = array(
+    'name' => 'delete own openberkely_content_page content',
     'roles' => array(
       'administrator' => 'administrator',
       'builder' => 'builder',
@@ -53,9 +53,9 @@ function openberkeley_pages_defaultconfig_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit any openberkeley_page content'.
-  $permissions['edit any openberkeley_page content'] = array(
-    'name' => 'edit any openberkeley_page content',
+  // Exported permission: 'edit any openberkely_content_page content'.
+  $permissions['edit any openberkely_content_page content'] = array(
+    'name' => 'edit any openberkely_content_page content',
     'roles' => array(
       'administrator' => 'administrator',
       'builder' => 'builder',
@@ -64,9 +64,9 @@ function openberkeley_pages_defaultconfig_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'edit own openberkeley_page content'.
-  $permissions['edit own openberkeley_page content'] = array(
-    'name' => 'edit own openberkeley_page content',
+  // Exported permission: 'edit own openberkely_content_page content'.
+  $permissions['edit own openberkely_content_page content'] = array(
+    'name' => 'edit own openberkely_content_page content',
     'roles' => array(
       'administrator' => 'administrator',
       'builder' => 'builder',

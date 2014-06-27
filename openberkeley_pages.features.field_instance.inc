@@ -10,9 +10,9 @@
 function openberkeley_pages_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-openberkeley_page-body'
-  $field_instances['node-openberkeley_page-body'] = array(
-    'bundle' => 'openberkeley_page',
+  // Exported field_instance: 'node-openberkely_content_page-body'
+  $field_instances['node-openberkely_content_page-body'] = array(
+    'bundle' => 'openberkely_content_page',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
