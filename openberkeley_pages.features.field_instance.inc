@@ -82,7 +82,6 @@ function openberkeley_pages_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('If this content is part of the home page, please select Yes to allow for easy editing access.');
 
   return $field_instances;
 }
