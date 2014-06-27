@@ -7,6 +7,56 @@
 include_once('openberkeley_pages.features.inc');
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function openberkeley_pages_form_openberkeley_landing_page_node_form_alter(&$form, &$form_state, $form_id) {
+  // Streamline the form to the bare minimum.
+  foreach (element_children($form) as $key) {
+    switch ($key) {
+      case 'title':
+      case 'actions':
+        // Allow it to remain as is!
+        break;
+
+      case 'path':
+      case 'menu':
+        // Make appear inline, without a fieldset around it.
+        unset($form[$key]['#type']);
+        break;
+
+      default:
+        // Hide everything else!
+        if (!in_array($form[$key]['#type'], array('value', 'hidden', 'token'))) {
+          $form[$key]['#access'] = FALSE;
+        }
+    }
+  }
+
+  // Re-order path and menu.
+  $form['path']['#weight'] = 30;
+  $form['menu']['#weight'] = 31;
+
+  // Only show the path alias, if it's NOT automatically generated.
+  $form['path']['alias']['#states'] = array(
+    'invisible' => array(
+      'input[name="path[pathauto]"]' => array('checked' => TRUE),
+    ),
+  );
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function openberkeley_pages_module_implements_alter(&$implementations, $hook) {
+  // Move our hooks to the end so they are executed last.
+  if (($hook == 'form_alter' || $hook == 'modules_enabled') && isset($implementations['openberkeley_pages'])) {
+    $group = $implementations['openberkeley_pages'];
+    unset($implementations['openberkeley_pages']);
+    $implementations['openberkeley_pages'] = $group;
+  }
+}
+
+/**
  * Implements hook_modules_enabled().
  *
  * This hook is implemented to assign some default permissions for Panelizer's

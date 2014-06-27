@@ -24,18 +24,18 @@ function openberkeley_pages_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function openberkeley_pages_node_info() {
   $items = array(
-    'openberkeley_landing_page' => array(
-      'name' => t('Landing Page'),
-      'base' => 'node_content',
-      'description' => t('A primary landing page to display to users on your site.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'openberkeley_content_page' => array(
       'name' => t('Content Page'),
       'base' => 'node_content',
       'description' => t('An important page to display to users on your site.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'openberkeley_landing_page' => array(
+      'name' => t('Landing Page'),
+      'base' => 'node_content',
+      'description' => t('A primary landing page to display to users on your site.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
