@@ -104,24 +104,18 @@ function openberkeley_pages_modules_enabled($modules) {
     features_revert_module('openberkeley_pages');
     drupal_static_reset('panelizer_entity_plugin_get_handler');
 
-    // Define some permissions for the editor role.
-    $editor = user_role_load_by_name('editor');
-    user_role_grant_permissions($editor->rid, array('administer panelizer node openberkeley_content_page breadcrumbs'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node openberkeley_content_page content'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node openberkeley_content_page context'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node openberkeley_content_page defaults'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node openberkeley_content_page layout'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node openberkeley_content_page overview'));
-    user_role_grant_permissions($editor->rid, array('administer panelizer node openberkeley_content_page settings'));
+    $roles = array('editor', 'administrator');
+    $content_types = array('openberkeley_content_page', 'openberkeley_landing_page');
+    $components = array('breadcrumbs', 'content', 'context', 'defaults', 'layout', 'overview', 'settings');
 
-    // Define some permissions for the administrator role.
-    $administrator = user_role_load_by_name('administrator');
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node openberkeley_content_page breadcrumbs'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node openberkeley_content_page content'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node openberkeley_content_page context'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node openberkeley_content_page defaults'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node openberkeley_content_page layout'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node openberkeley_content_page overview'));
-    user_role_grant_permissions($administrator->rid, array('administer panelizer node openberkeley_content_page settings'));
+    // Setup some default permissions for Panelizer.
+    foreach ($roles as $role_name) {
+      $role = user_role_load_by_name($role_name);
+      foreach ($content_types as $content_type) {
+        foreach ($components as $component) {
+          user_role_grant_permissions($role->rid, array("administer panelizer node {$content_type} {$component}"));
+        }
+      }
+    }
   }
 }
